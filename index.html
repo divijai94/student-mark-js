@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>STUDENT MARK</title>
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body{
+                    background-color: black;
+                    width: 100%;
+                    height: 100vh;
+                    font-family: cursive;
+                    position: relative;
+                }
+                h1{
+                    color: rgb(139, 14, 108);
+                    text-align: center;
+                    padding-top: 30px;
+
+                }
+                #box{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 800px;
+                    height: 500px;
+                    background-color:cyan;
+                }
+                #box form{
+                    margin-left: 20px;
+                }
+                .p
+                {
+                    margin-left: 20px;
+                }
+
+            </style>
+        </head>
+        <body>
+            <div id="box">
+          <h1>Student Mark Calculation</h1>
+      
+    <form>
+    Name  : <input type="text" id="name"/><br>
+    Stu_id: <input type="number" id="sid"/><br>  
+    Mark1 : <input type="text" id="Mark1" /><br>
+    Mark2 : <input type="text" id="Mark2" /><br>
+    Mark3 : <input type="text" id="Mark3" /><br>
+    Mark4 : <input type="text" id="Mark4" /><br>
+    Mark5 : <input type="text" id="Mark5" /><br>
+    <br>
+    <input type="button" onClick="findTotal()" Value="Find Total" />
+    <input type="button" onClick="findAverage()" Value="Find Average" />
+    </form>
+    <br>
+    <p>Result :</p> <br>
+    <span id = "result"></span><br>
+    <span id = "avg"></span>
+</div>
+    </body>
+    <script>
+    
+
+function findTotal()
+{
+        var num1 =parseFloat( document.getElementById("Mark1").value);
+        var num2 =parseFloat( document.getElementById("Mark2").value);
+        var num3 =parseFloat( document.getElementById("Mark3").value);
+        var num4 =parseFloat( document.getElementById("Mark4").value);
+        var num5 =parseFloat( document.getElementById("Mark5").value);
+        document.getElementById("result").innerHTML = "The Student Total Mark is:  " +(num1 + num2 + num3 + num4 + num5);
+}
+
+function findAverage() 
+{ 
+        var num1 =parseFloat( document.getElementById("Mark1").value);
+        var num2 =parseFloat( document.getElementById("Mark2").value);
+        var num3 =parseFloat( document.getElementById("Mark3").value);
+        var num4 =parseFloat( document.getElementById("Mark4").value);
+        var num5 =parseFloat( document.getElementById("Mark5").value);
+document.getElementById("avg").innerHTML = "The Student Mark percentage is:  " +(num1 + num2 + num3 + num4 + num5) / 5 +"%";
+}
+    </script>
+    </html>
